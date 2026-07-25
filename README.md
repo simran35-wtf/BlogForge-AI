@@ -67,7 +67,7 @@ blog_ai/
 ### 1. Clone the repository
 
 \```bash
-git clone https://github.com/<your-username>/BlogForge-AI.git
+git clone https://github.com/simran35-wtf/BlogForge-AI.git
 cd BlogForge-AI
 \```
 
