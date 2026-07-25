@@ -1,0 +1,9 @@
+flask
+python-dotenv
+gunicorn
+pydantic
+
+groq
+google-generativeai
+
+flask-sqlalchemy

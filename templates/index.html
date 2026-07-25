@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Blog Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <h1>AI Blog Generator</h1>
+    <a href="/dashboard">📚 View Saved Posts</a>
+    <p class="subtitle">Enter a topic, pick a model, and generate a full blog post.</p>
+
+    <form id="blog-form">
+      <label for="topic">Blog Topic</label>
+      <input type="text" id="topic" name="topic" placeholder="e.g. Why cats sleep so much" required>
+
+      <label for="provider">Choose AI Model</label>
+      <select id="provider" name="provider">
+        <option value="groq">Groq (Llama)</option>
+        <option value="gemini">Gemini</option>
+        <option value="compare">Compare Both</option>
+      </select>
+
+      <button type="submit" id="generate-btn">Generate Blog Post</button>
+    </form>
+
+    <div id="loading" class="hidden">⏳ Generating your blog post... please wait</div>
+
+    <div id="error-box" class="hidden"></div>
+
+    <div id="result" class="hidden">
+      <h2 id="result-title"></h2>
+      <p id="result-meta"></p>
+      <div id="result-tags"></div>
+      <hr>
+      <div id="result-body"></div>
+      <button id="save-btn" class="hidden">💾 Save this Post</button>
+      <span id="save-status"></span>
+    </div>
+
+    <div id="compare-result" class="hidden">
+  <div class="compare-column">
+    <h3>Groq</h3>
+    <div id="groq-output"></div>
+    <button id="save-groq-btn" class="hidden">💾 Save Groq Post</button>
+    <span id="save-groq-status"></span>
+  </div>
+  <div class="compare-column">
+    <h3>Gemini</h3>
+    <div id="gemini-output"></div>
+    <button id="save-gemini-btn" class="hidden">💾 Save Gemini Post</button>
+    <span id="save-gemini-status"></span>
+  </div>
+  </div>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='js/generator.js') }}"></script>
+</body>
+</html>
