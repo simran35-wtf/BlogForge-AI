@@ -8,10 +8,13 @@
 <body>
 
   <div class="container">
-    <h1>AI Blog Generator</h1>
-    <a href="/dashboard">📚 View Saved Posts</a>
+    <div class="top-bar">
+      <h1>AI Blog Generator</h1>
+      <a href="/dashboard" class="saved-posts-btn">📚 Saved Posts</a>
+    </div>
     <p class="subtitle">Enter a topic, pick a model, and generate a full blog post.</p>
 
+    
     <form id="blog-form">
       <label for="topic">Blog Topic</label>
       <input type="text" id="topic" name="topic" placeholder="e.g. Why cats sleep so much" required>
