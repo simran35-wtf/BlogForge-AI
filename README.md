@@ -17,7 +17,7 @@ An AI-powered blog post generator built with Flask. Pick a topic, choose an AI m
 
 - **Multi-provider AI generation** — generate blog posts using Groq (Llama) or Gemini
 - **Compare mode** — generate from both providers in parallel and compare the results side by side
-- **Structured output** — every post comes back with a title, meta description, tags, and a well-organized markdown body (intro, sections, key  takeaways, sources)
+- **Structured output** — every post comes back with a title, meta description, tags, and a well-organized markdown body (intro, sections, key takeaways, sources)
 - **Save & manage posts** — save any generated post to a database and revisit it later
 - **Dashboard** — view, open, and delete all saved posts from one place
 - **Clean, responsive UI** — works on desktop and mobile
@@ -32,7 +32,7 @@ An AI-powered blog post generator built with Flask. Pick a topic, choose an AI m
 
 ## Project Structure
 
-\```
+```
 blog_ai/
 ├── app.py                     # Flask app entry point
 ├── models.py                  # Database model (Post)
@@ -60,41 +60,41 @@ blog_ai/
 └── static/
     ├── css/style.css
     └── js/generator.js
-\```
+```
 
 ## Setup
 
 ### 1. Clone the repository
 
-\```bash
+```bash
 git clone https://github.com/simran35-wtf/BlogForge-AI.git
 cd BlogForge-AI
-\```
+```
 
 ### 2. Install dependencies
 
-\```bash
+```bash
 pip install -r requirements.txt
-\```
+```
 
 ### 3. Add your API keys
 
 Create a `.env` file in the project root:
 
-\```
+```
 GROQ_API_KEY=your_groq_key_here
 GEMINI_API_KEY=your_gemini_key_here
 SECRET_KEY=any_random_string
-\```
+```
 
 - Get a free Groq key: [console.groq.com/keys](https://console.groq.com/keys)
 - Get a free Gemini key: [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
 
 ### 4. Run the app
 
-\```bash
+```bash
 python app.py
-\```
+```
 
 Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 
