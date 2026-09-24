@@ -33,7 +33,7 @@ load_dotenv()
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-def generate(prompt, system_msg, model="llama-3.3-70b-versatile") -> BlogPost:
+def generate(prompt, system_msg, model="openai/gpt-oss-120b") -> BlogPost:
     resp = client.chat.completions.create(
         model=model,
         messages=[
